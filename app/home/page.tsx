@@ -1,6 +1,8 @@
+import Navbar from "../components/Navbar"
+
 const HomePage = () => {
     return ( 
-        <h1>Hello authenticated user !</h1>
+        <Navbar />
     );
 }
 
