@@ -6,6 +6,7 @@ import { Heart, PlayCircle } from "lucide-react";
 import { useState } from "react";
 // import { addTowatchlist, deleteFromWatchlist } from "../action";
 import { usePathname } from "next/navigation";
+import PlayVideoModal from "./PlayVideoModal";
 
 interface iAppProps {
     title: string;
@@ -72,7 +73,7 @@ export default function MovieCard({
             </p>
         </div>
 
-        {/* <PlayVideoModal
+        <PlayVideoModal
             youtubeUrl={youtubeUrl}
             key={movieId}
             title={title}
@@ -82,7 +83,7 @@ export default function MovieCard({
             age={age}
             duration={time}
             release={year}
-        /> */}
+        />
         </>
     );
 }
