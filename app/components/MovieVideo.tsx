@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import prisma from "../utils/db";
 import MovieButtons from "./MovieButtons";
 
@@ -27,14 +26,14 @@ async function getData() {
 const MovieVideo = async () => {
     const data = await getData();
     return ( 
-        <div className="h-[55vh] lg:h-[60vh] w-full flex justify-start items-center">
+        <div className="h-[60vh] lg:h-[80vh] w-full flex justify-start items-center">
             <video 
                 poster={data?.imageString}
                 autoPlay
                 muted
                 loop
                 src={data?.videoSource}
-                className="w-full absolute top-0 left-0 h-[60vh] object-cover -z-10 brightness-[60%]"
+                className="w-full absolute top-0 left-0 h-[70vh] lg:h-[80vh] object-cover -z-10 brightness-[60%]"
             >
             </video>
 
