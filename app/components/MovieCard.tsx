@@ -2,11 +2,11 @@
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Heart, PlayCircle } from "lucide-react";
-// import PlayVideoModal from "./PlayVideoModal";
+import PlayVideoModal from "./PlayVideoModal";
+
 import { useState } from "react";
 // import { addTowatchlist, deleteFromWatchlist } from "../action";
 import { usePathname } from "next/navigation";
-import PlayVideoModal from "./PlayVideoModal";
 
 interface iAppProps {
     title: string;

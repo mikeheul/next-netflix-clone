@@ -29,7 +29,7 @@ export default function PlayVideoModal({
 }: iAppProps) {
     return (
     <Dialog open={state} onOpenChange={() => changeState(!state)}>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="sm:max-w-[500px]">
             <DialogHeader>
                 <DialogTitle>{title}</DialogTitle>
                 <DialogDescription className="line-clamp-3">
@@ -41,7 +41,7 @@ export default function PlayVideoModal({
                     <p>{duration}h</p>
                 </div>
             </DialogHeader>
-            <iframe src={youtubeUrl} height={250} className="w-full"></iframe>
+            <iframe src={youtubeUrl} height={400} className="w-full"></iframe>
         </DialogContent>
     </Dialog>
     );
