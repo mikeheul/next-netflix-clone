@@ -27,7 +27,7 @@ async function getData() {
         //     }
         // ], 
         orderBy: {
-            'createdAt': 'desc'
+            'id': 'desc'
         },
         take: 4 // LIMIT 4
     })
