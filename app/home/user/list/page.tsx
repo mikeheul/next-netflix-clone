@@ -1,4 +1,5 @@
 
+import Heading from "@/app/components/Heading";
 import MovieCard from "@/app/components/MovieCard";
 import { authOptions } from "@/app/utils/auth";
 import prisma from "@/app/utils/db";
@@ -34,6 +35,23 @@ export default async function Watchlist() {
     const session = await getServerSession(authOptions);
     const data = await getData(session?.user?.email as string);
     
+    if (data.length === 0) {
+        return (
+            <>
+                <h1 className="text-white text-4xl font-bold mt-10 px-5 sm:px-0">
+                    Your watchlist
+                </h1>
+                <div className="h-[60vh] flex flex-col gap-2 justify-center items-center">
+                    <Heading
+                        title="No data"
+                        subtitle = "Try to add element to your watchlist !"
+                        center
+                    />
+                </div>
+            </>
+        );
+    }
+
     return (
         <>
             <h1 className="text-white text-4xl font-bold mt-10 px-5 sm:px-0">

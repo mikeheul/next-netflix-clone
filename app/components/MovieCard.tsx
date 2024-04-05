@@ -7,6 +7,7 @@ import PlayVideoModal from "./PlayVideoModal";
 import { useState } from "react";
 // import { addTowatchlist, deleteFromWatchlist } from "../action";
 import { usePathname } from "next/navigation";
+import { addTowatchlist, deleteFromWatchlist } from "../action";
 
 interface iAppProps {
     title: string;
@@ -41,7 +42,7 @@ export default function MovieCard({
 
         <div className="right-5 top-5 absolute z-10">
             {watchList ? (
-            <form action="">
+            <form action={deleteFromWatchlist}>
                 <input type="hidden" name="watchlistId" value={wachtListId} />
                 <input type="hidden" name="pathname" value={pathName} />
                 <Button variant="outline" size="icon">
@@ -49,7 +50,7 @@ export default function MovieCard({
                 </Button>
             </form>
             ) : (
-            <form action="">
+            <form action={addTowatchlist}>
                 <input type="hidden" name="movieId" value={movieId} />
                 <input type="hidden" name="pathname" value={pathName} />
                 <Button variant="outline" size="icon">
