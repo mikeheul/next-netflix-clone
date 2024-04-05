@@ -11,6 +11,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { signOut } from "next-auth/react";
+import Link from "next/link";
 
 export default function UserNav() {
 
@@ -32,6 +33,10 @@ export default function UserNav() {
                 <p className="text-xs leading-none text-muted-foreground">mickael.murmann@gmail.com</p>
             </div>
             </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+                <Link href="/home/user/list">My list</Link>
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={() => signOut()}>Sign out</DropdownMenuItem>
         </DropdownMenuContent>
