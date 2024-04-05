@@ -36,7 +36,7 @@ export default function MovieCard({
     const pathName = usePathname();
     return (
         <>
-        <button onClick={() => setOpen(true)} className="-mt-14">
+        <button onClick={() => setOpen(true)} className="-mt-14" aria-label="play-button">
             <PlayCircle className="h-20 w-20" />
         </button>
 
