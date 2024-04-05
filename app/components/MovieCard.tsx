@@ -45,7 +45,7 @@ export default function MovieCard({
             <form action={deleteFromWatchlist}>
                 <input type="hidden" name="watchlistId" value={wachtListId} />
                 <input type="hidden" name="pathname" value={pathName} />
-                <Button variant="outline" size="icon">
+                <Button variant="outline" size="icon" aria-label="delete-favorite-button">
                     <Heart className="w-4 h-4 text-red-500" />
                 </Button>
             </form>
@@ -53,7 +53,7 @@ export default function MovieCard({
             <form action={addTowatchlist}>
                 <input type="hidden" name="movieId" value={movieId} />
                 <input type="hidden" name="pathname" value={pathName} />
-                <Button variant="outline" size="icon">
+                <Button variant="outline" size="icon" aria-label="add-favorite-button">
                     <Heart className="w-4 h-4" />
                 </Button>
             </form>
