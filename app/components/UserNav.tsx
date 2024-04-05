@@ -20,7 +20,7 @@ export default function UserNav() {
         <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="relative h-10 w-10 rounded-sm">
                 <Avatar className="h-10 w-10 rounded-sm">
-                    <AvatarImage src="https://litfscsfxnurglnjitim.supabase.co/storage/v1/object/public/userImage/avatar.png" alt="avatar" />
+                    <AvatarImage src="https://litfscsfxnurglnjitim.supabase.co/storage/v1/object/public/avatar_netflix/netflix_avatar.png" alt="avatar" />
                     <AvatarFallback className="rounded-sm">Jan</AvatarFallback>
                 </Avatar>
             </Button>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Open_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import { NextAuthProvider } from "./components/NextAuthProvider";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ 
